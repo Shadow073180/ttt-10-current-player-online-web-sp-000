@@ -3,17 +3,17 @@ def turn_count(board)
   board.each do |x|
     if x == "X" || x == "O"
       counter += 1
-    
+
     end
   return counter
   end
-  
+
 end
 
 
 def current_player(board)
   counter2 = turn_count(board)
-  if counter2 == 0 || counter2.odd?
+  if counter2 % 2 == 0
     return "X"
   elsif counter2.even?
     return "O"
